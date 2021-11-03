@@ -4,8 +4,10 @@
 /* Variables  */
 :root {
   --main-bg-color: #f5f5f5;
-  --app-bg-color: #0a155a;
+  --app-bg-color: #0a155c;
+  --todo-bg-color: #a9e5bb;
   --color-primary-1: #d103fc;
+  --textColor-1: #111111;
   --clr-primary-2: hsl(205, 100%, 96%);
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
@@ -49,19 +51,23 @@ h1 {
   background: var(--app-bg-color);
   border-radius: var(--radius);
   width: 50vw;
-  height: 50vh;
+  height: 80vh;
 }
 #app-heading {
   padding: 2rem;
   text-align: center;
+  /* margin-top: 1rem; */
+  /* margin-bottom: 2rem; */
 }
 #form-container {
-  /* border: 1px solid red; */
   position: fixed;
   width: 30vw;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+#inputTodo {
+  margin-top: 2rem;
 }
 input[type="text"] {
   width: 80%;
@@ -79,4 +85,21 @@ input[type="text"] {
   padding: 0.4rem;
   font-size: 1.2rem;
   color: #f5f5f5;
+}
+/* Todo list */
+#todos {
+  margin-top: 2rem;
+}
+.todo-list {
+  background: var(--todo-bg-color);
+  color: var(--textColor-1);
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  height: 4rem;
+  margin-bottom: 0.5rem;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
