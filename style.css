@@ -16,8 +16,8 @@
   --radius: 1.5rem;
 }
 *,
-*:before,
-*:after {
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -28,6 +28,7 @@ body {
   font-family: var(--ff-primary);
   font-size: 0.875rem;
   color: var(--clr-primary-2);
+  overflow: visible;
 }
 
 h1,
@@ -45,14 +46,17 @@ h1 {
 }
 
 #container {
-  position: fixed;
+  /* position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   background: var(--app-bg-color);
   border-radius: var(--radius);
   width: 50vw;
-  height: auto;
+  margin: 0 auto;
+  /* width: 50vw;
+  margin-top: 6rem;
+  height: auto;  */
 }
 #heading {
   /* border: 1px solid yellow; */
@@ -95,29 +99,42 @@ input:focus {
 }
 /* Todo list */
 #todos {
-  /* margin-top: 2rem; */
-}
-.todo-list {
-  /* background: var(--todo-bg-color);
-  border-radius: 20px;
-
-  color: var(--textColor-1);
-  font-size: 1.3rem;
-  padding: 0.5rem;
-  height: 4rem;
-  margin-bottom: 0.5rem; */
+  border: 1px solid white;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
 }
 ul {
-  /* list-style-type: none;
+  list-style-type: none;
   margin: 0;
-  padding: 0; */
+  padding: 0;
 }
-li {
+
+.todo-list {
+  background: var(--todo-bg-color);
+  border-radius: 10px;
+  color: var(--textColor-1);
+  margin: 2rem 0 2rem;
+  width: 100%;
+  padding: 0.5rem;
 }
 .todo-item {
-  /* changes layout */
-  /* position: absolute;
-  top: 108px; */
+  /* padding: 2rem; */
+}
+.todo-item > p {
+  font-size: 1.5rem;
+}
+.todo-date {
+  font-size: 1rem;
+  background-color: var(--color-primary-1);
+  display: inline-block;
+  position: relative;
+  padding: 1rem;
+  margin-right: 1rem;
+  color: #f5f5f5;
+  /* top: 1px;
+  right: 1 px; */
 }
 .todo-date {
   /* relative does not change layout */
