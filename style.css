@@ -15,7 +15,9 @@
   --spacing: 0.1rem;
   --radius: 1.5rem;
 }
-* {
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -39,11 +41,10 @@ h4 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
-/* global ids */
-#app-container {
+#container {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -51,55 +52,86 @@ h1 {
   background: var(--app-bg-color);
   border-radius: var(--radius);
   width: 50vw;
-  height: 80vh;
+  height: auto;
 }
-#app-heading {
-  padding: 2rem;
+#heading {
+  /* border: 1px solid yellow; */
+  margin: 2rem 0 2rem;
   text-align: center;
-  /* margin-top: 1rem; */
-  /* margin-bottom: 2rem; */
+  padding: 2rem;
 }
-#form-container {
-  position: fixed;
-  width: 30vw;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#inputTodo {
-  margin-top: 2rem;
+#form-center {
+  display: flex;
+  justify-content: center;
 }
 input[type="text"] {
-  width: 80%;
   background-color: transparent;
-  border: none;
-  border-bottom: 1px solid var(--color-primary-1);
-  color: #fff;
-  font-size: 1.3rem;
-  padding: 10px 0;
+  /* border-style: none; */
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none; /* border: none; */
+  border-color: var(--color-primary-1);
+  /* outline: none; */
+  padding: 5px;
+  margin-right: 40px;
+  width: 70%;
+  font-size: 1.5rem;
+}
+input:focus {
+  outline: none;
+  color: #f5f5f5;
 }
 #submit-btn {
   background: var(--color-primary-1);
   border: none;
   border-radius: 0.4rem;
-  padding: 0.4rem;
-  font-size: 1.2rem;
+  padding: 0.7rem;
+  font-size: 1rem;
   color: #f5f5f5;
+  transition: background 2s linear;
+}
+#submit-btn:hover {
+  background: red;
 }
 /* Todo list */
 #todos {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 .todo-list {
-  background: var(--todo-bg-color);
+  /* background: var(--todo-bg-color);
+  border-radius: 20px;
+
   color: var(--textColor-1);
   font-size: 1.3rem;
   padding: 0.5rem;
   height: 4rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem; */
 }
 ul {
-  list-style-type: none;
+  /* list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0; */
+}
+li {
+}
+.todo-item {
+  /* changes layout */
+  /* position: absolute;
+  top: 108px; */
+}
+.todo-date {
+  /* relative does not change layout */
+  /* position: relative;
+  margin-left: 5 px;
+  top: 5px;
+  right: 10 px;
+  font-size: 0.8rem;
+  color: #fff;
+  background-color: var(--color-primary-1);
+  display: inline-block;
+  padding: 1 rem;
+
+  background-color: var(--color-primary-1);
+  display: inline-block;
+  padding: 1.1rem; */
 }

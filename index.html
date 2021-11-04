@@ -10,52 +10,54 @@
     <header>
 
     </header>
-    <main>
+    <main id="container">
         
-        <section id='app-container'>
-            <div id="app-heading">
-                <h1> What's up, Emmanuel !</h1>
-            </div>
-            <div id='form-container'>
-                <div id='inputTodo'>
-                    <form action="">
-                        <input type="text" name="todo-list" id="inputText" placeholder="Enter your task for today">
+        
+            <section id="heading">
+                <h1> What's up for today, Emmanuel !</h1>
+            </section>
+            
+            <section id='form-center'>
+                    <form>
+                        <input type="text" placeholder="Enter your task for today">
                         <button type="submit" id="submit-btn">Submit</button>
                     </form>
-                </div>
+            </section>
 
                
                 <div id="todos">
                     <ul>
                         <li class="todo-list">
-                            <article class="">
-                                <p>Finish todo app</p>
-                               </article>
+                           
+                            <article class="todo-item">
+                                
+                                    <p><span class="todo-date">2nd <br> Nov</span>Complete todo app</p>
+                                
+                            </article>
                         </li>
                         <li class="todo-list">
                             <article>
-                            <p>Work on code wars project</p>
+                            <p><span class="todo-date">2nd <br> Nov</span>Work on code wars project</p>
                            </article>
                         </li>
                         <li class="todo-list">
                             <article>
-                            <p>Update riohs website</p>
+                            <p><span class="todo-date">2nd <br> Nov</span>Update riohs website</p>
                            </article>
                         </li>
                         <li class="todo-list">
                             <article>
-                            <p>Master coding interview</p>
+                            <p><span class="todo-date">2nd <br> Nov</span>Master coding interview</p>
                            </article>
                         </li>
                     </ul>
                    
                     
-                </div>
             </div>
            
            
             
-        </section>
+    
 
     </main>
     <script src="app.js"></script>
