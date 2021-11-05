@@ -35,10 +35,10 @@ h1,
 h2,
 h3,
 h4 {
-  letter-spacing: var(--spacing);
+  /* letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
-  font-family: var(--ff-primary);
+  font-family: var(--ff-primary); */
 }
 
 h1 {
@@ -99,7 +99,6 @@ input:focus {
 }
 /* Todo list */
 #todos {
-  border: 1px solid white;
   margin-top: 2rem;
   margin-bottom: 2rem;
   display: flex;
@@ -115,40 +114,41 @@ ul {
   background: var(--todo-bg-color);
   border-radius: 10px;
   color: var(--textColor-1);
-  margin: 2rem 0 2rem;
   width: 100%;
-  padding: 0.5rem;
+  height: auto;
+  margin: 20px;
 }
+
 .todo-item {
-  /* padding: 2rem; */
-}
-.todo-item > p {
-  font-size: 1.5rem;
-}
-.todo-date {
-  font-size: 1rem;
-  background-color: var(--color-primary-1);
-  display: inline-block;
   position: relative;
+  /* display: flex; */
+}
+
+.todo-date {
+  /* font-size: 1rem; */
+  background-color: var(--color-primary-1);
+  display: inline-flex;
+  position: relative;
+  /* top: 20px; */
   padding: 1rem;
   margin-right: 1rem;
   color: #f5f5f5;
   /* top: 1px;
   right: 1 px; */
 }
-.todo-date {
-  /* relative does not change layout */
-  /* position: relative;
-  margin-left: 5 px;
-  top: 5px;
-  right: 10 px;
-  font-size: 0.8rem;
-  color: #fff;
-  background-color: var(--color-primary-1);
-  display: inline-block;
-  padding: 1 rem;
-
-  background-color: var(--color-primary-1);
-  display: inline-block;
-  padding: 1.1rem; */
+.todo-icons {
+  position: absolute;
+  bottom: 3px;
+  left: 75px;
+  /* right: 0px; */
+}
+.editIcon,
+.trashIcon,
+.completeIcon {
+  /* text-align: center; */
+  /* margin-top: 20px; */
+  margin-right: 20px;
+}
+.task {
+  display: inline;
 }
